@@ -1,6 +1,7 @@
 package com.bridgelabz.springbootpractise;
 
 import com.bridgelabz.springbootpractise.component.DemoBean;
+import com.bridgelabz.springbootpractise.component.EmployeeBean;
 import com.bridgelabz.springbootpractise.controller.HelloRestController;
 
 import org.slf4j.Logger;
@@ -19,6 +20,11 @@ public class DemobeanApplication {
 		DemoBean demoBean=context.getBean(DemoBean.class);
 		logger.debug("Demo Bean= "+demoBean.toString());
 		logger.debug(""+context.getBean(HelloRestController.class));
+
+		EmployeeBean employeeBean=context.getBean(EmployeeBean.class);
+		employeeBean.setEid(104);
+		employeeBean.setEname("Spring Framework Guru");
+		employeeBean.showEmployeeDetails();
 		
 	}
 
