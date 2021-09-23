@@ -2,6 +2,7 @@ package com.bridgelabz.springbootpractise;
 
 import com.bridgelabz.springbootpractise.component.DemoBean;
 import com.bridgelabz.springbootpractise.controller.HelloRestController;
+import com.bridgelabz.springbootpractise.controller.HelloWebController;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -16,6 +17,7 @@ public class DemobeanApplication {
 		DemoBean demoBean=context.getBean(DemoBean.class);
 		System.out.println("Demo Bean= "+demoBean.toString());
 		System.out.println(context.getBean(HelloRestController.class));
+		
 	}
 
 }
